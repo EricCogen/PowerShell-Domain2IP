@@ -12,10 +12,9 @@
   while ($R.Peek() -ge 0)
   {
     $Domain = $r.ReadLine()
-      $Out = host.exe -tA -4 $Domain
-      $Out = $Domain + "|" + $Out
-      Write-Host $Out
-      Add-Content -Path $savePath -Value $Out
-
+    $Out = host.exe -tA -4 $Domain
+    $Out = $Domain + "|" + $Out
+    Write-Host $Out
+    Add-Content -Path $savePath -Value $Out
   }
   $R.Dispose()
